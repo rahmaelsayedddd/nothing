@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Task1</title>
+    <!-- Main Task CSS File -->
+    <link rel="stylesheet" href="./css/calc.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Poppins:wght@200;300;600;700;800&family=Work+Sans:wght@200;300;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator</h1>
+        <div class="calc">
+            <form>
+                <div class="screen">
+                    <input type="text" name="screen">
+                </div>
+                <div> 
+                    <input type="button" value="AC" class="reset" onclick="screen.value = '' ">
+                    <input type="button" value="DE" class="delete" onclick="screen.value = screen.value.slice(0,-1)">
+                    <input type="button" value="." onclick="screen.value += '.' ">
+                    <input type="button" value="/" onclick="screen.value += '/' ">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="screen.value += '7' ">
+                    <input type="button" value="8" onclick="screen.value += '8' ">
+                    <input type="button" value="9" onclick="screen.value += '9' ">
+                    <input type="button" value="*" onclick="screen.value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="screen.value += '4' ">
+                    <input type="button" value="5" onclick="screen.value += '5' ">
+                    <input type="button" value="6" onclick="screen.value += '6' ">
+                    <input type="button" value="-" onclick="screen.value += '-' ">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="screen.value += '1' ">
+                    <input type="button" value="2" onclick="screen.value += '2' ">
+                    <input type="button" value="3" onclick="screen.value += '3' ">
+                    <input type="button" value="+" onclick="screen.value += '+' ">
+                </div>
+                <div>
+                    <input type="button" value="0" class="zero" onclick="screen.value += '0' ">
+                    <input type="button" value="=" class="equal" onclick="screen.value = eval(screen.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
